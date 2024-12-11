@@ -1,0 +1,852 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+:root{
+    --primary-color: #00dc64;
+    --fantasy: #8b00e9; 
+    --romance: #fd337f; 
+    --action: #207af4;
+    --drama: #23b9a4;
+    --horror: #be0000;
+    --sports: #1ba8f2;
+    --supernatural: #7a41e9;
+    --thriller: #c00355;
+    --comedy: #dbb002;
+    --scifi: #1d1b1b;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f5f5;
+}
+ul li{
+    list-style: none;
+
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+.desktop{
+    min-width: 1400px
+}
+
+.header-menu{
+    padding: 10px 48px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.header-menu li:hover{
+  color: var(--primary-color);
+}
+
+.header-menu__left{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.header-logo img{
+    width: 70px;
+}
+
+.header-list{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-list li{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.header-menu__right{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-shop{
+    font-size: 16px;
+    color: var(--primary-color);
+    text-transform: uppercase;
+}
+
+.header-publish{
+    padding: 12px 24px;
+    background-color: #27272a;
+    color: #fff;
+    border-radius: 22px;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.header-login{
+    padding: 12px 24px;
+    border: 1px solid #27272a;
+    border-radius: 22px;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.banner{
+    width: 100%;
+    background: url(./images/bg.jpg) no-repeat center center/cover;
+    height: 492px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-section{
+    position: relative;
+    width: 25%;
+}
+
+.banner-sec-1{
+    position: absolute;
+    bottom: 0;
+    left: -40px;
+}
+
+.banner-sec-2{
+    position: absolute;
+    top: -15px;
+    left: -8px;
+}
+
+.main-content{
+    width: 1125px;
+    margin: 0 auto;
+}
+
+.genre{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.genre-list{
+    display: flex;
+    align-items: center;
+    
+}
+
+.genre-list li{
+    padding: 15px 18px;
+    font-size: 15px;
+}
+
+.genre-inactive{
+    color: gray;
+}
+
+.genre-active{
+    background-color: #fff;
+    color: #000;
+}
+
+.genre-list li:hover{
+  color: #000;
+}
+
+.top{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    margin-top: 40px;
+    gap: 20px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #d4d4d4;
+}
+
+.section-content{
+    display: none;
+}
+
+.top-item.item-1{
+    background: url(../genre/drama/love-4-a-walk.jpg) no-repeat center center/cover;
+}
+
+.top-item.item-2 {
+    background: url(../genre/drama/marionetta.jpg) no-repeat center center/cover;
+}
+
+.top-item.item-3 {
+    background: url(../genre/drama/teenage-mercenary.jpg) no-repeat center center/cover;
+}
+
+.top-item.item-4 {
+    background: url(../genre/drama/the-remarried-empress.jpg) no-repeat center center/cover;
+}
+
+.top-item.item-5 {
+    background: url(../genre/drama/trapped-in-a-soap-opera.jpg) no-repeat center center/cover;
+}
+
+.top-item.item-6 {
+    background: url(../genre/fantasy/behind-her-highnesss-smile.jpg) no-repeat center center/cover;
+}
+
+.top-item.item-7 {
+    background: url(../genre/fantasy/jacksons-diary.jpg) no-repeat center center/cover;
+}
+
+.top-item.item-8 {
+    background: url(../genre/fantasy/from-a-knight-to-a-lady.jpg) no-repeat center center/cover;
+}
+
+.top-item.item-9 {
+    background: url(../genre/fantasy/winter-before-spring.jpg) no-repeat center center/cover;
+}
+
+.top-item.item-10 {
+    background: url(../genre/fantasy/go-away-romeo.jpg) no-repeat center center/cover;
+}
+
+.top-item.item-11 {
+    background: url(../genre/comedy/your-throne.jpg) no-repeat center center/cover;
+}
+
+.top-item.item-12 {
+    background: url(../genre/comedy/i-stole-the-first-rankers-soul.jpg) no-repeat center center/cover;
+}
+
+.top-item.item-13 {
+    background: url(../genre/comedy/star-catcher.jpg) no-repeat center center/cover;
+}
+
+.top-item.item-14 {
+    background: url(../genre/comedy/im-dating-a-psycopath.jpg) no-repeat center center/cover;
+}
+
+.top-item.item-15 {
+    background: url(../genre/comedy/dear-nemesis.jpg) no-repeat center center/cover;
+}
+
+.top-item.item-16{
+    background: url(../genre/action/the-mafia-nanny.jpg) no-repeat center center/cover;
+}
+
+.top-item.item-17 {
+    background: url(../genre/action/omniscient-reader.jpg) no-repeat center center/cover;
+}
+
+.top-item.item-18 {
+    background: url(../genre/action/eleceed.jpg) no-repeat center center/cover;
+}
+
+.top-item.item-19 {
+    background: url(../genre/action/the-lone-necromancer.jpg) no-repeat center center/cover;
+}
+
+.top-item.item-20 {
+    background: url(../genre/action/return-of-the-blossoming-blade.jpg) no-repeat center center/cover;
+}
+
+.top-item.item-21 {
+    background: url(../genre/sliceoflife/ko.jpg) no-repeat center center/cover;
+}
+
+.top-item.item-22 {
+    background: url(../genre/sliceoflife/adventures-of-god.jpg) no-repeat center center/cover;
+}
+
+.top-item.item-23 {
+    background: url(../genre/sliceoflife/so-not-my-type.jpg) no-repeat center center/cover;
+}
+
+.top-item.item-24 {
+    background: url(../genre/sliceoflife/ingrid-the-plague-doctor.jpg) no-repeat center center/cover;
+}
+
+.top-item.item-25 {
+    background: url(../genre/sliceoflife/safely-endangered.jpg) no-repeat center center/cover;
+}
+
+.top-item.item-26{
+    background: url(../genre/romance/1.jpg) no-repeat center center/cover;
+}
+
+.top-item.item-27 {
+    background: url(../genre/romance/2.jpg) no-repeat center center/cover;
+}
+
+.top-item.item-28 {
+    background: url(../genre/romance/3.jpg) no-repeat center center/cover;
+}
+
+.top-item.item-29 {
+    background: url(../genre/romance/4.jpg) no-repeat center center/cover;
+}
+
+.top-item.item-30 {
+    background: url(../genre/romance/5.jpg) no-repeat center center/cover;
+}
+
+.top-item.item-31 {
+    background: url(../genre/superhero/1.jpg) no-repeat center center/cover;
+}
+
+.top-item.item-32 {
+    background: url(../genre/superhero/2.jpg) no-repeat center center/cover;
+}
+
+.top-item.item-33 {
+    background: url(../genre/superhero/3.jpg) no-repeat center center/cover;
+}
+
+.top-item.item-34 {
+    background: url(../genre/superhero/4.jpg) no-repeat center center/cover;
+}
+
+.top-item.item-35 {
+    background: url(../genre/superhero/5.jpg) no-repeat center center/cover;
+}
+
+.top-item.item-36{
+    background: url(../genre/scifi/1.jpg) no-repeat center center/cover;
+}
+
+.top-item.item-37 {
+    background: url(../genre/scifi/2.jpg) no-repeat center center/cover;
+}
+
+.top-item.item-38 {
+    background: url(../genre/scifi/3.jpg) no-repeat center center/cover;
+}
+
+.top-item.item-39 {
+    background: url(../genre//scifi/4.jpg) no-repeat center center/cover;
+}
+
+.top-item.item-40 {
+    background: url(../genre/scifi/5.jpg) no-repeat center center/cover;
+}
+
+.top-item.item-42 {
+    background: url(../genre/thriller/2.jpg) no-repeat center center/cover;
+}
+
+.top-item.item-41 {
+    background: url(../genre/thriller/1.jpg) no-repeat center center/cover;
+}
+
+.top-item.item-43 {
+    background: url(../genre/thriller/3.jpg) no-repeat center center/cover;
+}
+
+.top-item.item-44 {
+    background: url(../genre/thriller/4.jpg) no-repeat center center/cover;
+}
+
+.top-item.item-45 {
+    background: url(../genre/thriller/5.jpg) no-repeat center center/cover;
+}
+
+.top-item.item-46{
+    background: url(../genre/supernatural/1.jpg) no-repeat center center/cover;
+}
+
+.top-item.item-47 {
+    background: url(../genre/supernatural/2.jpg) no-repeat center center/cover;
+}
+
+.top-item.item-48 {
+    background: url(../genre/supernatural/3.jpg) no-repeat center center/cover;
+}
+
+.top-item.item-49 {
+    background: url(../genre/supernatural/4.png) no-repeat center center/cover;
+}
+
+.top-item.item-50 {
+    background: url(../genre/supernatural/5.jpg) no-repeat center center/cover;
+}
+
+.item{
+    padding: 10px;
+    cursor: pointer;
+    position: relative;
+    width: 210px;
+    height: 210px;
+}
+
+.item:hover .section-content{
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f87171;
+    padding: 0 20px;
+    display: flex;
+    align-items: baseline;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+
+}
+
+.section-head{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.section-head h3{
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.section-head p {
+    font-size: 14px;
+    color: var(--primary-color);
+}
+
+.scan{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.top-item .scan{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    font-size: 12px;
+    color: #fff;
+    background-color: var(--primary-color);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-head h3{
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.content-head p {
+    font-size: 10px;
+}
+
+
+.content{
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid #fff;
+    font-size: 10px;
+}
+
+.new{
+    margin-top: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #d4d4d4;
+}
+
+.headline{
+    font-size: 28px;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-bottom: 14px;
+    text-align: center;
+}
+
+.new-list{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.new-item .scan{
+    background-color: #000;
+    color: var(--primary-color);
+    font-size: 10px;
+}
+
+.genres{
+    margin-top: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #d4d4d4;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.genres-list{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.genres-head{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #fff;
+    align-items: baseline;
+}
+
+.horror{
+    background-color: var(--horror);
+}
+
+.sports{
+  background-color: var(--sports);  
+}
+
+.genres-item .scan{
+    font-size: 10px;
+    background-color:#f3f4f6;
+    color: var(--primary-color);
+}
+
+.trending{
+    margin-top: 40px;
+padding-bottom: 40px;
+   background-color: #fff;
+}
+
+.trending-contain{
+    width: 1125px;
+    margin: 0 auto;
+    padding-top: 60px;
+    display: flex;
+    align-items: center;
+    gap: 70px;
+}
+
+.trending-list{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.trending-list-item{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 8px 0;
+    border-bottom: 1px solid #d4d4d4;
+}
+
+.trending-content{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.number{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+.trending-content__txt{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.trending-auth{
+    font-size: 12px;
+    color: #a3a3a3;
+}
+
+.footer{
+    padding-top: 80px;
+    padding-bottom: 30px;
+    width: 100%;
+    background-color: #f3f4f6;
+}
+
+.footer-app{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.app-flex{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.app-flex img{
+    width: 150px;
+}
+
+.app-flex  img:last-child{
+    width: 150px;
+    height: 40px;
+}
+
+.footer-icon{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.footer-icon path{
+    fill: #000
+}
+
+.footer-list{
+    margin-top: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.mobile{
+    display: none;
+
+}
+
+
+.mb-menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #fff;
+
+}
+
+.mb-logo{
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+
+.mb-search img{
+    width: 20px;
+}
+
+.mb-banner{
+    width: 100%;
+    background: url(./images/bg.jpg) no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mb-banner img{
+    width: 100%;
+    position: relative;
+    left: -20px;
+
+}
+
+.mb-main{
+    background-color: #fff;
+    padding-top: 20px;
+}
+
+.mb-top{
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.mb-headline{
+    font-size: 16px;
+    font-weight: bold;
+    padding-left: 20px;
+}
+
+.mb-list{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.mb-content{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.mb-content h3{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.mb-content p {
+    font-size: 14px;
+}
+
+.mb-view{
+    color: var(--primary-color);
+}
+
+.mb-fav{
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.mb-fav__content{
+    padding: 10px;
+}
+
+.mb-fav__content h3{
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.mb-fav__content h3 span{
+    font-size: 14px;
+    margin-left: 8px;
+}
+
+.mb-fav__list{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.mb-fav__list img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+
+.romance{
+    background-color: #ec4899;
+}
+
+.fantasy{
+    background-color: #7e22ce;
+}
+
+.mb-popular{
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-bottom: 20px;
+}
+
+.mb-popular__list{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.mb-popular__item{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.mb-number{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.mb-popular__info{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.mb-popular__info img{
+    width: 80px;
+    height: 80px;
+}
+
+.mb-popular__name h3{
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+
+.mb-popular__name p {
+    font-size: 14px;
+}
+
+.mb-footer{
+    position: relative;
+    padding-top: 40px;
+    padding-bottom: 80px;
+}
+.mb-download{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 4px 10px;
+    border-radius: 20px;
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+
+}
+.mb-download img{
+    width: 30px;
+}
+
+.mb-download h3{
+    font-size: 12px;
+}
+
+.mb-list__custom{
+    margin-top: 20px !important ;
+    font-weight: normal;
+}
+
+
+@media (max-width: 768px){
+    .desktop{
+       display: none;
+    }
+
+    .mobile{
+        display: block;
+    }
+
+}
