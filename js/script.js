@@ -24,10 +24,26 @@ const links = [
   { ids: ["thu"], url: "/Thursday.html" },
   { ids: ["fri"], url: "/Friday.html" },
   { ids: ["sat"], url: "/Saturday.html" },
-  { ids: ["sun"], url: "/Sunday.html" }
+  { ids: ["sun"], url: "/Sunday.html" },
+  { ids: ["google-login"], url: "/Monday.html" }
 ];
 
 links.forEach(link => {
   link.ids.forEach(id => setupClickListener(id, link.url));
 });
 
+
+// Login Parts
+const loginButton = document.querySelector('.header-login');
+const modalWrapper = document.getElementById('loginModal');
+
+loginButton.addEventListener('click', (e) => {
+  e.preventDefault();
+  modalWrapper.classList.add('show');
+});
+
+modalWrapper.addEventListener('click', (e) => {
+  if (e.target === modalWrapper) {
+    modalWrapper.classList.remove('show');
+  }
+});
