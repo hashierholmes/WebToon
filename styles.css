@@ -6,6 +6,78 @@
 }
 
 
+/* Modal Parts */
+.modal-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.3s, opacity 0.3s;
+}
+
+.modal-wrapper.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+.login-modal {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  padding: 20px;
+  text-align: center;
+}
+
+.login-modal h2 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: #333;
+}
+
+.login-modal p {
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #555;
+}
+
+.login-modal button {
+  position: relative;
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 5px;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: center;
+  background: #f4f4f4;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-modal button img {
+  position: absolute;
+  left: 10px;
+  height: 20px;
+  width: 20px;
+}
+
+.login-modal button:hover {
+  background: #ddd;
+}
+
+
 :root{
     --primary-color: #00dc64;
     --fantasy: #8b00e9; 
