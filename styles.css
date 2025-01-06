@@ -5,8 +5,52 @@
     box-sizing: border-box;
 }
 
+/* Email Form */
+.login-modal form label {
+  display: block;
+  text-align: left;
+  margin: 10px 0 5px;
+  font-size: 14px;
+  color: #333;
+}
 
-/* Modal Parts */
+.login-modal form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.login-modal .actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.login-modal .actions button {
+  flex: 1;
+}
+
+.extra-links {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #555;
+}
+
+.extra-links a {
+  color: gray;
+  text-decoration: none;
+}
+
+.extra-links span {
+  color: gray;
+  font-weight: bold;
+}
+
+/* Login Parts */
 .modal-wrapper {
   position: fixed;
   top: 0;
