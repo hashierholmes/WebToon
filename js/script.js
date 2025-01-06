@@ -32,10 +32,15 @@ links.forEach(link => {
   link.ids.forEach(id => setupClickListener(id, link.url));
 });
 
-
 // Login Parts
 const loginButton = document.querySelector('.header-login');
 const modalWrapper = document.getElementById('loginModal');
+const emailButton = modalWrapper.querySelector('.email');
+const emailFormModal = document.getElementById('EmailForm');
+const backButton = emailFormModal.querySelector('.back');
+const loginSubmitButton = emailFormModal.querySelector('.login');
+const emailInput = emailFormModal.querySelector('#email');
+const passwordInput = emailFormModal.querySelector('#password');
 
 loginButton.addEventListener('click', (e) => {
   e.preventDefault();
@@ -46,4 +51,38 @@ modalWrapper.addEventListener('click', (e) => {
   if (e.target === modalWrapper) {
     modalWrapper.classList.remove('show');
   }
+});
+
+emailButton.addEventListener('click', () => {
+  modalWrapper.classList.remove('show');
+  emailFormModal.classList.add('show');
+});
+
+backButton.addEventListener('click', () => {
+  emailFormModal.classList.remove('show');
+  modalWrapper.classList.add('show');
+});
+
+emailFormModal.addEventListener('click', (e) => {
+  if (e.target === emailFormModal) {
+    emailFormModal.classList.remove('show');
+  }
+});
+
+loginSubmitButton.disabled = true;
+
+const checkFormValidity = () => {
+  if (emailInput.value.trim() !== '' && passwordInput.value.trim() !== '') {
+    loginSubmitButton.disabled = false;
+  } else {
+    loginSubmitButton.disabled = true;
+  }
+};
+
+emailInput.addEventListener('input', checkFormValidity);
+passwordInput.addEventListener('input', checkFormValidity);
+
+loginSubmitButton.addEventListener('click', (e) => {
+  e.preventDefault();
+  window.location.href = '/Monday.html';
 });
